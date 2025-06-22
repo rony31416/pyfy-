@@ -1,0 +1,3 @@
+The Alchemist | Paulo Coelho | 9780061122415 | 1988 | 300.0 | 10
+Clean Code | Robert C. Martin | 9780132350884 | 2008 | 450.0 | 5
+THe girl|paul|34234|2001|45.0|23

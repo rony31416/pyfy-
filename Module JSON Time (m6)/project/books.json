@@ -1,0 +1,26 @@
+[
+    {
+        "title": "The happy life ",
+        "author": "rony majumder ",
+        "isbn": "1234",
+        "year": "2010",
+        "price": 45.0,
+        "quantity": 34
+    },
+    {
+        "title": "death",
+        "author": "pal",
+        "isbn": "343",
+        "year": "2030",
+        "price": 450.0,
+        "quantity": 49
+    },
+    {
+        "title": "rrr",
+        "author": "rrr",
+        "isbn": "222",
+        "year": "222",
+        "price": 22.0,
+        "quantity": 1
+    }
+]

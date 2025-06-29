@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - ShopEase{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold mb-4">About ShopEase</h1>
+        <p class="text-xl">Your trusted online shopping destination since 2020</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Our Story</h2>
+                <p class="text-gray-600 mb-6">
+                    ShopEase was founded in 2020 with a simple mission: to make online shopping easy, secure, and
+                    enjoyable for everyone. What started as a small team of passionate entrepreneurs has grown into a
+                    trusted e-commerce platform serving thousands of customers worldwide.
+                </p>
+                <p class="text-gray-600 mb-6">
+                    We believe that shopping should be more than just a transaction—it should be an experience. That's
+                    why we've built our platform with user experience at the forefront, offering a wide range of
+                    high-quality products at competitive prices, backed by exceptional customer service.
+                </p>
+                <p class="text-gray-600">
+                    Today, we continue to innovate and expand our offerings, always keeping our customers' needs and
+                    satisfaction as our top priority.
+                </p>
+            </div>
+            <div class="w-full h-80 bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                <img src="{% static 'images/about_us.jpg' %}" alt="About ShopEase" class="object-cover w-full h-full">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission and Vision Section -->
+<section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-8">Our Mission & Vision</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Our Mission</h3>
+                <p class="text-gray-600">
+                    To empower customers with a seamless, affordable, and reliable shopping experience through
+                    innovation, quality service, and customer-centricity.
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Our Vision</h3>
+                <p class="text-gray-600">
+                    To be the world’s most customer-focused online marketplace, where people can discover and buy
+                    anything they need at the best value.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-8">Meet Our Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Team Member 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="{% static 'images/team1.jpg' %}" alt="CEO"
+                    class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                <h4 class="text-lg font-semibold">Sarah Ahmed</h4>
+                <p class="text-blue-600 text-sm">Founder & CEO</p>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="{% static 'images/team2.jpg' %}" alt="CTO"
+                    class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                <h4 class="text-lg font-semibold">Ravi Kumar</h4>
+                <p class="text-blue-600 text-sm">Chief Technology Officer</p>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="{% static 'images/team3.jpg' %}" alt="COO"
+                    class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                <h4 class="text-lg font-semibold">Linda Lee</h4>
+                <p class="text-blue-600 text-sm">Chief Operating Officer</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-blue-600 text-white py-16 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-4">Join the ShopEase Community</h2>
+        <p class="text-lg mb-6">Experience seamless shopping, exclusive offers, and world-class support.</p>
+        <a href="{% url 'products' %}"
+            class="inline-block bg-white text-blue-600 px-6 py-3 font-semibold rounded-lg hover:bg-gray-100 transition">
+            Shop Now
+        </a>
+    </div>
+</section>
+{% endblock %}

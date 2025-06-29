@@ -1,0 +1,330 @@
+{% extends 'base.html' %}
+
+{% block title %}Products - ShopEase{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold mb-4">Our Products</h1>
+        <p class="text-xl">Discover our wide range of quality products</p>
+    </div>
+</section>
+
+<!-- Filters and Products -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar Filters -->
+            <div class="lg:w-1/4">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-lg font-semibold mb-4">Filter Products</h3>
+                    
+                    <!-- Category Filter -->
+                    <div class="mb-6">
+                        <h4 class="font-medium mb-3">Categories</h4>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-2">
+                                <span class="text-sm">Electronics</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-2">
+                                <span class="text-sm">Fashion</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-2">
+                                <span class="text-sm">Home & Garden</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-2">
+                                <span class="text-sm">Sports</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Price Filter -->
+                    <div class="mb-6">
+                        <h4 class="font-medium mb-3">Price Range</h4>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="radio" name="price" class="mr-2">
+                                <span class="text-sm">Under $50</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="price" class="mr-2">
+                                <span class="text-sm">$50 - $100</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="price" class="mr-2">
+                                <span class="text-sm">$100 - $200</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="price" class="mr-2">
+                                <span class="text-sm">Over $200</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Rating Filter -->
+                    <div class="mb-6">
+                        <h4 class="font-medium mb-3">Rating</h4>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-2">
+                                <span class="text-sm flex items-center">
+                                    <span class="text-yellow-400">★★★★★</span>
+                                    <span class="ml-1">(5 stars)</span>
+                                </span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-2">
+                                <span class="text-sm flex items-center">
+                                    <span class="text-yellow-400">★★★★☆</span>
+                                    <span class="ml-1">(4+ stars)</span>
+                                </span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-2">
+                                <span class="text-sm flex items-center">
+                                    <span class="text-yellow-400">★★★☆☆</span>
+                                    <span class="ml-1">(3+ stars)</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Apply Filters</button>
+                </div>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="lg:w-3/4">
+                <!-- Sort Options -->
+                <div class="flex justify-between items-center mb-6">
+                    <p class="text-gray-600">Showing 1-12 of 48 products</p>
+                    <select class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest First</option>
+                        <option>Best Rating</option>
+                    </select>
+                </div>
+                
+                <!-- Products Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Product 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="bg-gray-200 h-48 flex items-center justify-center">
+                            <i class="fas fa-headphones text-gray-400 text-4xl"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2">Wireless Headphones</h3>
+                            <p class="text-gray-600 text-sm mb-2">Premium quality sound with noise cancellation</p>
+                            <div class="flex items-center mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                                <span class="text-gray-500 text-sm ml-1">(143 reviews)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-blue-600">$89.99</span>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 8 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="bg-gray-200 h-48 flex items-center justify-center">
+                            <i class="fas fa-mobile-alt text-gray-400 text-4xl"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2">Phone Case</h3>
+                            <p class="text-gray-600 text-sm mb-2">Protective case for your smartphone</p>
+                            <div class="flex items-center mb-2">
+                                <span class="text-yellow-400">★★★★☆</span>
+                                <span class="text-gray-500 text-sm ml-1">(67 reviews)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-blue-600">$19.99</span>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 9 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="bg-gray-200 h-48 flex items-center justify-center">
+                            <i class="fas fa-tablet-alt text-gray-400 text-4xl"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2">Tablet Stand</h3>
+                            <p class="text-gray-600 text-sm mb-2">Adjustable stand for tablets and phones</p>
+                            <div class="flex items-center mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                                <span class="text-gray-500 text-sm ml-1">(112 reviews)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-blue-600">$24.99</span>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="flex justify-center mt-12">
+                    <div class="flex space-x-2">
+                        <button class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">Previous</button>
+                        <button class="px-3 py-2 bg-blue-600 text-white rounded-lg">1</button>
+                        <button class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">2</button>
+                        <button class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">3</button>
+                        <button class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">4</button>
+                        <button class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}-400">★★★★★</span>
+                                <span class="text-gray-500 text-sm ml-1">(124 reviews)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-blue-600">$99.99</span>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="bg-gray-200 h-48 flex items-center justify-center">
+                            <i class="fas fa-watch text-gray-400 text-4xl"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2">Smart Watch</h3>
+                            <p class="text-gray-600 text-sm mb-2">Track your fitness and stay connected</p>
+                            <div class="flex items-center mb-2">
+                                <span class="text-yellow-400">★★★★☆</span>
+                                <span class="text-gray-500 text-sm ml-1">(89 reviews)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-blue-600">$199.99</span>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="bg-gray-200 h-48 flex items-center justify-center">
+                            <i class="fas fa-backpack text-gray-400 text-4xl"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2">Laptop Backpack</h3>
+                            <p class="text-gray-600 text-sm mb-2">Durable and stylish for everyday use</p>
+                            <div class="flex items-center mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                                <span class="text-gray-500 text-sm ml-1">(156 reviews)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-blue-600">$49.99</span>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="bg-gray-200 h-48 flex items-center justify-center">
+                            <i class="fas fa-volume-up text-gray-400 text-4xl"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2">Bluetooth Speaker</h3>
+                            <p class="text-gray-600 text-sm mb-2">Portable speaker with amazing sound</p>
+                            <div class="flex items-center mb-2">
+                                <span class="text-yellow-400">★★★★☆</span>
+                                <span class="text-gray-500 text-sm ml-1">(73 reviews)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-blue-600">$79.99</span>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="bg-gray-200 h-48 flex items-center justify-center">
+                            <i class="fas fa-mouse text-gray-400 text-4xl"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2">Gaming Mouse</h3>
+                            <p class="text-gray-600 text-sm mb-2">High precision gaming mouse</p>
+                            <div class="flex items-center mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                                <span class="text-gray-500 text-sm ml-1">(201 reviews)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-blue-600">$59.99</span>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="bg-gray-200 h-48 flex items-center justify-center">
+                            <i class="fas fa-coffee text-gray-400 text-4xl"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2">Coffee Maker</h3>
+                            <p class="text-gray-600 text-sm mb-2">Brew perfect coffee every morning</p>
+                            <div class="flex items-center mb-2">
+                                <span class="text-yellow-400">★★★★☆</span>
+                                <span class="text-gray-500 text-sm ml-1">(95 reviews)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-blue-600">$129.99</span>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 7 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="bg-gray-200 h-48 flex items-center justify-center">
+                            <i class="fas fa-running text-gray-400 text-4xl"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2">Running Shoes</h3>
+                            <p class="text-gray-600 text-sm mb-2">Comfortable shoes for your daily run</p>
+                            <div class="flex items-center mb-2">
+                                                              <span class="text-yellow-400">★★★★★</span>
+                                <span class="text-gray-500 text-sm ml-1">(132 reviews)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-blue-600">$69.99</span>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-center mt-12">
+                    <div class="flex space-x-2">
+                        <button class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">Previous</button>
+                        <button class="px-3 py-2 bg-blue-600 text-white rounded-lg">1</button>
+                        <button class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">2</button>
+                        <button class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">3</button>
+                        <button class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">4</button>
+                        <button class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

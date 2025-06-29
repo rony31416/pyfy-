@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+
+{% block title %}ShopEase - Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-5xl font-bold mb-6">Welcome to ShopEase</h2>
+        <p class="text-xl mb-8">Discover amazing products at unbeatable prices</p>
+        <a href="/products/" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Shop Now</a>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Shop by Category</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <a href="/categories/fashion/" class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                <div class="bg-gradient-to-r from-pink-400 to-red-400 h-32 flex items-center justify-center">
+                    <i class="fas fa-tshirt text-white text-4xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Fashion</h3>
+                    <p class="text-gray-600">Latest trends in clothing</p>
+                </div>
+            </a>
+            
+            <a href="/categories/electronics/" class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                <div class="bg-gradient-to-r from-blue-400 to-indigo-400 h-32 flex items-center justify-center">
+                    <i class="fas fa-laptop text-white text-4xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Electronics</h3>
+                    <p class="text-gray-600">Latest gadgets and tech</p>
+                </div>
+            </a>
+            
+            <a href="/categories/home-garden/" class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                <div class="bg-gradient-to-r from-green-400 to-teal-400 h-32 flex items-center justify-center">
+                    <i class="fas fa-home text-white text-4xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Home & Garden</h3>
+                    <p class="text-gray-600">Decor and essentials</p>
+                </div>
+            </a>
+            
+            <a href="/categories/sports/" class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                <div class="bg-gradient-to-r from-yellow-400 to-orange-400 h-32 flex items-center justify-center">
+                    <i class="fas fa-dumbbell text-white text-4xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Sports</h3>
+                    <p class="text-gray-600">Fitness and outdoor gear</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products -->
+<section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Featured Products</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Product 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                <div class="bg-gray-200 h-48 flex items-center justify-center">
+                    <i class="fas fa-headphones text-gray-400 text-4xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold mb-2">Wireless Headphones</h3>
+                    <p class="text-gray-600 mb-4">Premium quality sound with noise cancellation</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-blue-600">$99.99</span>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                <div class="bg-gray-200 h-48 flex items-center justify-center">
+                    <i class="fas fa-watch text-gray-400 text-4xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold mb-2">Smart Watch</h3>
+                    <p class="text-gray-600 mb-4">Track your fitness and stay connected</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-blue-600">$199.99</span>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                <div class="bg-gray-200 h-48 flex items-center justify-center">
+                    <i class="fas fa-backpack text-gray-400 text-4xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold mb-2">Laptop Backpack</h3>
+                    <p class="text-gray-600 mb-4">Durable and stylish for everyday use</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-blue-600">$49.99</span>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                <div class="bg-gray-200 h-48 flex items-center justify-center">
+                    <i class="fas fa-volume-up text-gray-400 text-4xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold mb-2">Bluetooth Speaker</h3>
+                    <p class="text-gray-600 mb-4">Portable speaker with amazing sound</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-blue-600">$79.99</span>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <a href="/products/" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">View All Products</a>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="bg-blue-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+        <p class="text-xl mb-8">Subscribe to our newsletter for exclusive deals and updates</p>
+        <form method="post" action="/newsletter/" class="max-w-md mx-auto flex">
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-l-lg text-gray-900 focus:outline-none" required>
+            <button type="submit" class="bg-white text-blue-600 px-6 py-3 rounded-r-lg font-semibold hover:bg-gray-100 transition">Subscribe</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

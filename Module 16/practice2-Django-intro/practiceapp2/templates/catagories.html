@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Categories - ShopEase{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="bg-gradient-to-r from-green-500 to-blue-500 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold mb-4">Shop by Categories</h1>
+        <p class="text-xl">Explore our wide range of product categories</p>
+    </div>
+</section>
+
+<!-- Categories Grid -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Category Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="{% static 'images/category_electronics.jpg' %}" alt="Electronics"
+                    class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">Electronics</h3>
+                    <p class="text-gray-600 text-sm">Gadgets, devices, and the latest tech.</p>
+                </div>
+            </div>
+
+            <!-- Category Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="{% static 'images/category_fashion.jpg' %}" alt="Fashion"
+                    class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">Fashion</h3>
+                    <p class="text-gray-600 text-sm">Trendy outfits and accessories for everyone.</p>
+                </div>
+            </div>
+
+            <!-- Category Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="{% static 'images/category_home.jpg' %}" alt="Home & Kitchen"
+                    class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">Home & Kitchen</h3>
+                    <p class="text-gray-600 text-sm">Essentials and decor to make your house a home.</p>
+                </div>
+            </div>
+
+            <!-- Category Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="{% static 'images/category_books.jpg' %}" alt="Books"
+                    class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">Books</h3>
+                    <p class="text-gray-600 text-sm">Bestsellers, educational, and fiction reads.</p>
+                </div>
+            </div>
+
+            <!-- Add more categories as needed -->
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-blue-600 text-white py-16 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-4">Find What You Love</h2>
+        <p class="text-lg mb-6">Thousands of products across all categories at unbeatable prices.</p>
+        <a href="{% url 'products' %}"
+            class="inline-block bg-white text-blue-600 px-6 py-3 font-semibold rounded-lg hover:bg-gray-100 transition">
+            Browse Products
+        </a>
+    </div>
+</section>
+{% endblock %}

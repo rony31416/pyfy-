@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Your Cart - ShopEase{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold mb-4">Your Shopping Cart</h1>
+        <p class="text-xl">Review your items and proceed to checkout</p>
+    </div>
+</section>
+
+<!-- Cart Content -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Cart Items -->
+        <div class="lg:col-span-2 space-y-8">
+            <!-- Cart Item -->
+            <div class="bg-white rounded-lg shadow-md p-4 flex items-center gap-6">
+                <img src="{% static 'images/product1.jpg' %}" alt="Product" class="w-24 h-24 object-cover rounded">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold">Wireless Headphones</h3>
+                    <p class="text-gray-500 text-sm">Electronics</p>
+                    <div class="mt-2 flex items-center gap-4">
+                        <span class="font-semibold text-blue-600">$59.99</span>
+                        <label class="text-sm text-gray-600">Qty:</label>
+                        <input type="number" value="1" min="1" class="w-16 border rounded px-2 py-1 text-center">
+                    </div>
+                </div>
+                <button class="text-red-500 hover:text-red-700 text-sm">Remove</button>
+            </div>
+
+            <!-- Another Cart Item -->
+            <div class="bg-white rounded-lg shadow-md p-4 flex items-center gap-6">
+                <img src="{% static 'images/product2.jpg' %}" alt="Product" class="w-24 h-24 object-cover rounded">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold">Smart Watch</h3>
+                    <p class="text-gray-500 text-sm">Wearables</p>
+                    <div class="mt-2 flex items-center gap-4">
+                        <span class="font-semibold text-blue-600">$89.99</span>
+                        <label class="text-sm text-gray-600">Qty:</label>
+                        <input type="number" value="2" min="1" class="w-16 border rounded px-2 py-1 text-center">
+                    </div>
+                </div>
+                <button class="text-red-500 hover:text-red-700 text-sm">Remove</button>
+            </div>
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold mb-6">Order Summary</h2>
+            <div class="flex justify-between mb-4">
+                <span class="text-gray-600">Subtotal</span>
+                <span class="font-medium">$239.97</span>
+            </div>
+            <div class="flex justify-between mb-4">
+                <span class="text-gray-600">Shipping</span>
+                <span class="font-medium">$10.00</span>
+            </div>
+            <div class="flex justify-between text-xl font-bold border-t pt-4">
+                <span>Total</span>
+                <span>$249.97</span>
+            </div>
+            <a href="{% url 'checkout' %}" class="block mt-6 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded text-center font-semibold transition">
+                Proceed to Checkout
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

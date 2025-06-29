@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Outstanding Colorful Webpage</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom animation for gradient */
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .animated-gradient {
+      background: linear-gradient(270deg, #ff5f6d, #ffc371, #24c6dc, #514a9d);
+      background-size: 800% 800%;
+      animation: gradientBG 15s ease infinite;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Header -->
+  <header class="animated-gradient text-center py-16 shadow-lg">
+    <h1 class="text-5xl font-extrabold tracking-wide drop-shadow-lg">
+      Welcome to the Colorful Experience
+    </h1>
+    <p class="mt-4 text-xl font-semibold text-gray-100/90">
+      Where design meets vibrance and creativity flows
+    </p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-6 py-16 grid gap-12 md:grid-cols-3">
+
+    <!-- Card 1 -->
+    <div class="bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 rounded-3xl p-8 shadow-2xl transform transition duration-500 hover:scale-105 hover:shadow-4xl">
+      <h2 class="text-3xl font-bold mb-4">{{name}}</h2>
+      <p class="text-yellow-100 font-semibold leading-relaxed">
+        Ignite your creativity with bold colors and modern design principles. Let your ideas shine bright like a radiant sun.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-gradient-to-tr from-green-400 via-blue-500 to-purple-600 rounded-3xl p-8 shadow-2xl transform transition duration-500 hover:scale-105 hover:shadow-4xl">
+      <h2 class="text-3xl font-bold mb-4">Dynamic Motion</h2>
+      <p class="text-blue-100 font-semibold leading-relaxed">
+        Smooth animations and interactive elements bring your page to life, keeping visitors engaged and mesmerized.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-gradient-to-tr from-indigo-600 via-pink-500 to-red-400 rounded-3xl p-8 shadow-2xl transform transition duration-500 hover:scale-105 hover:shadow-4xl">
+      <h2 class="text-3xl font-bold mb-4">Vibrant Palette</h2>
+      <p class="text-pink-100 font-semibold leading-relaxed">
+        Explore an extensive palette of colors that work harmoniously to create eye-catching visuals and lasting impressions.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="animated-gradient text-center py-8 mt-12 text-gray-100/90 font-semibold tracking-wider drop-shadow-lg">
+    © 2025 Colorful Web. All rights reserved.
+  </footer>
+
+</body>
+</html>

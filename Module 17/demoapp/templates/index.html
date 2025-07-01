@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Person Info</title>
+</head>
+<body>
+    <h1>Person Details</h1>
+
+    <p><strong>First Name:</strong> {{ person.first_name }}</p>
+    <p><strong>Last Name:</strong> {{ person.last_name }}</p>
+    <p><strong>Age:</strong> {{ person.age }}</p>
+    <p><strong>Email:</strong> {{ person.email }}</p>
+    <p><strong>Employed:</strong> {{ person.is_employed|yesno:"Yes,No" }}</p>
+
+    <h2>Address</h2>
+    <ul>
+        <li><strong>Street:</strong> {{ person.address.street }}</li>
+        <li><strong>City:</strong> {{ person.address.city }}</li>
+        <li><strong>State:</strong> {{ person.address.state }}</li>
+        <li><strong>Zip Code:</strong> {{ person.address.zip_code }}</li>
+    </ul>
+
+    <h2>Hobbies</h2>
+    <ul>
+        {% for hobby in person.hobbies %}
+            <li>{{ hobby }}</li>
+        {% empty %}
+            <li>No hobbies listed.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

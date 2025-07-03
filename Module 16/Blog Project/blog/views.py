@@ -1,14 +1,14 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
 from .models import Blog
 
-# Create your views here.
+
 def hello(request):
-    # posts = Post.objects.all()
-    
-    # result = ""
-    
-    # for post in posts :
-    #     result += f"{post.title} - {post.content} - {post.created_at}<br>"
-    # return HttpResponse(result)  
-    return render(request, 'index.html')
+    return render(request, 'base.html')
+
+def home(request):
+    blogs = Blog.objects.all().order_by('-created_at')
+    return render(request, 'home.html', {'blogs': blogs})
+
+def new_blog(request):
+
+    return render(request, 'blog_form.html', {'form_title': 'Add New Blog'})
